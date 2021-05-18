@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SurveyX, survey delivery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/styles.css" />
+        <script type="text/javascript" src="js/ajax.js"></script>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+        </style>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&display=swap');
+        </style>
+        <link rel="icon" href="icon.png">
+    </head>
+    
+    <body style="background-color: white;">
+        <div style="background-color:blue; position:fixed; height:75px; width:100%; background: rgb(6,122,167);
+background: linear-gradient(180deg, rgba(6,122,167,1) 0%, rgba(0,192,173,1) 80%); box-shadow: 0px 0px 10px 0px black;"> 
+            <div style="border-width:5px; border-color:black; height:100%; width:1300px; margin: auto;">
+                <a href="http://localhost:8080/ProjectIT/"> <div class="logoButton" style="margin-right: 1px; 
+                                                                 "><img style="height:65px; width: 250px" src="surveyxw.png"> </div> </a>
+                <a onClick="checkLogNavBar('ADD')"> <div class="navBarButton"><h1 class="buttonText">Add survey</h1></div> </a>
+                <a onClick="checkLogNavBar('MY')"> <div class="navBarButton"><h1 class="buttonText">My surveys</h1></div> </a>
+                <a href="http://localhost:8080/ProjectIT/"> <div class="navBarButton"><h1 class="buttonText">Browse</h1></div> </a>
+                <a href="http://localhost:8080/ProjectIT/"> <div class="navBarButton"><h1 class="buttonText">Help</h1></div> </a>
+                <a href="http://localhost:8080/ProjectIT/"> <div class="navBarButton"><h1 class="buttonText">FAQ</h1></div> </a>
+                <a href="RegistrationPanel.html"> <div class="alterButton"><h1>JOIN NOW</h1></div> </a>
+                <a href="LogInPanel.html"> <div class="logButton"><h1>LOG IN</h1></div> </a>
+            </div>
+        </div>
+        <div style="height: 85px; width: 100%;"></div>
+        <div class="container" style="margin-top: 50px; padding: 2px; padding-top: 3px; padding-bottom: 3px; width: 700px; background-color:transparent; border-radius: 100px 100px 100px 100px;  
+            background: rgb(3,151,171);
+            background: linear-gradient(0deg, rgba(3,151,171,1) 0%, rgba(2,218,172,1) 100%); box-shadow: 0px 1px 5px 0px black;
+            "> 
+            <div class="container" style="width: 698px; background: white; border-radius: 100px 100px 100px 100px; ">
+                <img src="surveyxg2.png" style="margin-top: 50px; margin-bottom: 50px; heigth: 130px; width: 500px;">
+            <form method="GET">
+                <h1 style="background: rgb(2,218,172);
+                background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; font-family: 'Open sans condensed', sans-serif; font-size: 60px;">Login</h1>
+                <input type="text" spellcheck="false" id="nick" name="nick"/>
+                <br/><br/>
+                <h1 style="background: rgb(2,218,172);
+                background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; font-family: 'Open sans condensed', sans-serif; font-size: 60px;">Password</h1>
+                <input type="password" id="password" name="password"/>
+                <br/><br/>
+                <input class='addQuestionButton' style="margin-bottom: 50px; margin-top: 50px;" onClick="login('nick', 'password', 'loginError')" type="button" value="  Log in  "/>
+            </form>
+                <div id="loginError">
+                    <h1 style="color: transparent;"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="height: 100%; font-size: 30px; color: #cccccc; margin-bottom: 50px; margin-top: 100px;">
+            Ⓒ Copyright 2021 SurveyX Inc.</br>Contact us : surveyxcontact@surveyx.com</div>
+    </body>
+</html>

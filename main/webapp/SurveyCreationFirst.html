@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SurveyX, survey delivery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/styles.css" />
+        <script type="text/javascript" src="js/ajax.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&display=swap');
+        </style>
+        <link rel="icon" href="icon.png">
+    </head>
+    
+    <body style="background-color: white;" onLoad="mainLoad('navBar'); timeFunction();">
+        
+        <div id="navBar" style=" position:fixed; height:75px; width:100%; background: rgb(6,122,167);
+background: linear-gradient(180deg, rgba(6,122,167,1) 0%, rgba(0,192,173,1) 80%); box-shadow: 0px 0px 10px 0px black;"> 
+            <div style="border-width:5px; border-color:black; height:100%; width:1300px; margin: auto;">
+                <a href="http://localhost:8080/ProjectIT/"> <div class="logoButton" style="margin-right: 1px; 
+                                                                 "><img style="height:65px; width: 250px" src="surveyxw.png"> </div> </a>
+                <a onClick="checkLogNavBar('ADD')"> <div class="navBarButton"><h1 class="buttonText">Add survey</h1></div> </a>
+                <a onClick="checkLogNavBar('MY')"> <div class="navBarButton"><h1 class="buttonText">My surveys</h1></div> </a>
+                <a href="http://localhost:8080/ProjectIT/"> <div class="navBarButton"><h1 class="buttonText">Browse</h1></div> </a>
+                <a href="http://localhost:8080/ProjectIT/"> <div class="navBarButton"><h1 class="buttonText">Help</h1></div> </a>
+                <a href="http://localhost:8080/ProjectIT/"> <div class="navBarButton"><h1 class="buttonText">FAQ</h1></div> </a>
+                <a href="RegistrationPanel.html"> <div class="alterButton"><h1>JOIN NOW</h1></div> </a>
+                <a href="LogInPanel.html"> <div class="logButton"><h1>LOG IN</h1></div> </a>
+            </div>
+        </div>
+        
+        <div style="height: 150px; width: 100%;"></div>
+        
+        <div class="container" style='margin-bottom: 100px;'>
+        
+            <div >
+                <h1 style="background: rgb(2,218,172);
+                    background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; font-family: 'Open sans condensed', sans-serif; font-size: 120px;">New survey creation</h1>
+                <h2 style="color: #cccccc; font-family: 'Open sans condensed', sans-serif; font-size: 30px;">Not sure where to start? Check 
+                    <a class='checkHelp' href=''>Help!</a></h2>
+            </div>
+
+            <div style="margin-top: 100px;">
+                <h1 style="background: rgb(2,218,172); text-align: left;
+                    background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; font-family: 'Open sans condensed', sans-serif; font-size: 40px;">First, your survey is going to need a title!</h1>
+            <textarea class="surveyCreationDescription" id='surveyTitle'  spellcheck="false" maxlength='150' oninput="autoresize(this)" 
+                      placeholder="Your title goes here..."></textarea>
+                
+                <h1 style="background: rgb(2,218,172); text-align: left; margin-top: 200px;
+                    background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; font-family: 'Open sans condensed', sans-serif; font-size: 40px;">It will also need an informative description!</h1>
+      <textarea class="surveyCreationDescription" id='surveyDescription' spellcheck="false" maxlength='255' oninput="autoresize(this)" 
+                placeholder="Don't make it too long, keep it interesting..."></textarea>
+<!--      <textarea id="surveyDescription" name="surveyDescription" rows="10" onkeydown="limitLines(this, 10)"  spellcheck="false" class="surveyDescription" 
+                placeholder="Don't make it too long, keep it interesting..." style="overflow: hidden; float: left; resize: none; width: 100%;"></textarea>-->
+            </div>
+        
+            <div>
+                <h1 style="background: rgb(2,218,172); text-align: left; margin-top: 200px; margin-bottom: 20px;
+                    background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; font-family: 'Open sans condensed', sans-serif; font-size: 40px;">Do you want your survey to be public?</h1>
+                <label class="switch">
+                    <input type="checkbox" id="publicTogBtn">
+                    <div class="slider"></div>
+                </label>
+                <h2 style="color: #cccccc; font-family: 'Open sans condensed', sans-serif; font-size: 30px; margin-top: 20px; margin-bottom: 20px;">
+                    Choosing yes will allow any user to fill and submit the answers.</h2>
+            </div>
+            
+            <div style='margin-top: 25px;'>
+                <h1 style="background: rgb(2,218,172); text-align: left;
+                    background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; font-family: 'Open sans condensed', sans-serif; font-size: 40px;">Starting now will casue your survey to close on:</h1>
+                <p id='time' style="background: rgb(2,218,172);
+                    background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; font-family: 'Open sans condensed', sans-serif; font-size: 120px;"></p>
+                <input class="addQuestionButton" style="margin-top: 100px; padding-left: 20%; padding-right: 20%;" type='button' id='createSurvey' 
+                       name='createSurvey' value='NEXT STEP' onClick="surveyNextStep()"/>
+            </div>
+            
+        </div>
+            
+        <div class="container" style="height: 100%; font-size: 30px; color: #cccccc; margin-bottom: 50px; margin-top: 100px;">
+            Ⓒ Copyright 2021 SurveyX Inc.</br>Contact us : surveyxcontact@surveyx.com</div>
+        
+    </body>
+</html>

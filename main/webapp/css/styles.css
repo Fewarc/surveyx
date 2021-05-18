@@ -1,0 +1,733 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29 gru 2020, 12:20:54
+    Author     : Piotr Berezka
+*/
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.container 
+{
+    width : 1300px;
+    margin: auto;
+    text-align: center;
+}
+
+.bottomButton
+{
+    
+}
+
+input[type=text] {
+  width: 75%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  font-size: 40px;
+  background-color: white;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  outline: none;
+  transition: 1s;
+  
+  background: rgb(2,218,172);
+  background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  font-family: 'Open sans condensed', sans-serif;
+}
+input[type=text]:focus {
+  border: 2px solid #02DAAC;
+  background-color: white;
+}
+
+.surveyCreationDescription
+{
+    float: left; width: 100%;
+    resize: none; 
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    font-size: 40px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    outline: none;
+    transition: 1s;
+    
+    background: rgb(2,218,172);
+    background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-family: 'Open sans condensed', sans-serif;
+}
+.surveyCreationDescription:focus
+{
+    border: 2px solid #02DAAC;
+    background-color: white;
+}
+
+.surveyDescription
+{
+  width: 75%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  font-size: 40px;
+  background-color: white;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  outline: none;
+  transition: 1s;
+  
+  background: rgb(2,218,172);
+  background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  font-family: 'Open sans condensed', sans-serif;
+}
+.surveyDescription:focus
+{
+  border: 2px solid #02DAAC;
+  background-color: white;
+}
+
+.questionText
+{
+    resize: none; 
+    overflow: hidden; 
+    max-height: calc(4em+20px);
+    width: 98%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #cccccc;
+    outline: none;
+    color: #02DAAC;
+    font-family: 'Open sans condensed', sans-serif;
+    font-size: 40px;
+    transition: 1s;
+    margin-top: 0px;
+}
+.questionText:focus
+{
+  border: none;
+  box-shadow: 0px 0px 5px 1px #888888;
+  background-color: white;
+  border-bottom: 2px solid #02DAAC;
+}
+
+::placeholder
+{
+    color: #cccccc;
+}
+
+.answerText
+{
+    resize: none; 
+    overflow: hidden; 
+    max-height: calc(100em + 20px);
+    width: 98%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    outline: none;
+    color: #02DAAC;
+    font-family: 'Open sans condensed', sans-serif;
+    font-size: 20px;
+    transition: 1s;
+}
+.answerText:focus
+{
+  box-shadow: 0px 0px 5px 1px #888888;
+  background-color: white;
+}
+
+input[type=password] {
+  width: 75%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  font-size: 40px;
+  background-color: white;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  outline: none;
+  transition: 1s;
+  
+  background: rgb(2,218,172);
+                background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; font-family: 'Open sans condensed', sans-serif;
+}
+
+input[type=password]:focus {
+  border: 2px solid #02DAAC;
+  background-color: white;
+  padding: 12px 20px 12px 40px;
+}
+
+input[type=button]
+{
+    
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #02DAAC;
+}
+
+select:-webkit-autofill:hover,
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill:hover
+{
+    -webkit-text-fill-color: #02DAAC;
+}
+
+.navBarButton 
+{
+    font-family: 'Open sans condensed', sans-serif;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display:inline;
+    float: left;
+    margin-right: 5px;
+    border: solid transparent 1px;
+    transition: background 0.75s;
+}
+.navBarButton:hover
+{
+    background-color: white;
+    color: #00C0AD;
+    cursor: pointer;
+}
+
+.logoButton 
+{
+    font-family: 'Open sans condensed', sans-serif;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display:inline;
+    float: left;
+    margin-right: 5px;
+    border: solid transparent 1px;
+}
+
+.logButton 
+{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 10px;
+    padding: 15px;
+    color: white;
+    border: solid white 2px;
+    background-color: transparent;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display:inline;
+    float: right;
+    border-radius: 15px;
+    margin-right: 15px;
+    transition: 0.5s;
+}
+
+.logButton:hover
+{
+    background-color: rgba(0,0,0,0.3);
+}
+
+.alterButton
+{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 10px;
+    padding: 15px;
+    color: #00C0AD;
+    background-color: transparent;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display:inline;
+    float: right;
+    background: white;
+    border-radius: 15px;
+    transition: 0.5s;
+    border: solid white 2px;
+}
+
+.alterButton:hover
+{
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    border: solid white 2px;
+}
+
+.buttonText 
+{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: #02DAAC; 
+    font-family: 'Open sans condensed', sans-serif; 
+    font-size: 35px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio input:checked ~ .checkmark {
+    background-color: #02DAAC;
+  
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;	
+    border-radius: 50%;
+    background: white;      
+}
+
+.check {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: #02DAAC; 
+    font-family: 'Open sans condensed', sans-serif; 
+    font-size: 35px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmarkb {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 15%;
+}
+
+/* On mouse-over, add a grey background color */
+.check:hover input ~ .checkmarkb {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.check input:checked ~ .checkmarkb {
+    background-color: #02DAAC;
+  
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmarkb:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.check input:checked ~ .checkmarkb:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.check .checkmarkb:after {
+    content: '✗';
+    font-size: 30px;
+    top: -0.3em;
+    left: 1px;
+    width: 0px;
+    height: 0px;	
+    color: white;
+    background: white;    
+}
+
+.dot 
+{
+    margin-top: 21px;
+    border: 2px solid transparent;
+    height: 30px;
+    width: 32px;
+    background-color: #bbb;
+    border-radius: 50%;
+    color: white;
+    font-size: 21px;
+    font-family: 'Seymour One', sans-serif;
+    background: #02DAAC;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.dot:hover
+{
+    border: 2px solid #02DAAC;
+    background: transparent;
+    color: #02DAAC;
+    /*box-shadow: inset 0px 0px 5px 1px #888888, 0px 0px 5px 1px #888888;*/
+    /*text-shadow:  2px 2px 3px #888888;*/
+}
+
+.addQuestionButton 
+{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 10px;
+    padding: 15px;
+    color: white;
+    border: none;
+    background: rgb(2,218,172);
+    background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%);
+    
+    top: 50%;
+    transform: translateY(-50%);
+    display:inline;
+    margin: auto;
+    border-radius: 15px;
+    margin-right: 15px;
+    font-size: 25px;
+    font-weight: 900;
+    transition: 0.5s;
+    cursor: pointer;
+   
+}
+
+.addQuestionButton:hover
+{
+    box-shadow: 0px 0px 10px 2px #888888;
+}
+
+.questionOptions
+{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 10px;
+    padding: 15px;
+    color: white;
+    border: 2px solid white;
+    background: #02DAAC;
+    top: 50%;
+    transform: translateY(-50%);
+    display:inline;
+    margin-top: 34px;
+    border-radius: 15px;
+    margin-right: 15px;
+    font-size: 30px;
+    font-weight: 900;
+    transition: 0.5s;
+    cursor: pointer;
+    float: right;
+    z-index: 0;
+}
+
+.questionOptions:hover
+{
+    border: 2px solid #02DAAC;
+    background: transparent;
+    color: #02DAAC;
+}
+
+.questionDiv
+{
+    margin: auto; 
+    box-shadow: 0px 0px 12px 1px #888888; 
+    width: 50%; 
+    height: 100%; 
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 75px;
+}
+
+.answerDiv
+{
+    margin-top: 50px; 
+    display: flex; 
+    width: 100%;
+}
+
+.typeText
+{
+    float: left; 
+    text-align: left; 
+    margin-left: 10px; 
+    margin-top: -40px;
+    margin-bottom: -100px;
+    position: absolute;
+    font-family: 'Open sans condensed', sans-serif; 
+    color: #cccccc;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  height: 102px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cccccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 60px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 96px;
+  width: 96px;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 1px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 60px;
+}
+
+input:checked + .slider {
+  background: rgb(2,218,172);
+    background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(158px);
+}
+
+.slider:after {
+  content:'NO';
+  color: white;
+  display: block;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 65%;
+  font-size: 80px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+input:checked + .slider:after {
+  content:'YES';
+  left: 35%;
+}
+
+
+.switchQuestion {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 36px;
+}
+
+.switchQuestion input {display:none;}
+
+.sliderQuestion {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cccccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 60px;
+}
+
+.sliderQuestion:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 60px;
+}
+
+input:checked + .sliderQuestion {
+    background: #02DAAC;
+}
+
+input:focus + .sliderQuestion {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .sliderQuestion:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(44px);
+}
+
+.sliderQuestion:after {
+  content:'NO';
+  color: white;
+  display: block;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 65%;
+  font-size: 25px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+input:checked + .sliderQuestion:after {
+  content:'YES';
+  left: 32%;
+}
+
+.mainPageTiles
+{
+    margin: auto; 
+    box-shadow: 0px 0px 12px 1px #888888; 
+    width: 50%; 
+    height: 100%; 
+    min-height: 450px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 75px;
+    position: relative;
+    transition: 1s;
+}
+
+.mainPageTilesHeader
+{
+    color: #02DAAC; 
+    font-family: 'Open sans condensed', sans-serif; font-size: 50px;
+    transition: 0.5s;
+}
+
+.mainPageTiles:hover > .mainPageTilesHeader
+{
+    font-size: 60px;
+}
+
+a
+{
+    text-decoration : none;
+}
+
+.checkHelp
+{
+    color: #cccccc; 
+    font-family: 'Open sans condensed', sans-serif; 
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.checkHelp:visited
+{
+    color: #cccccc; 
+    font-family: 'Open sans condensed', sans-serif; 
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.checkHelp:hover
+{
+    background: rgb(2,218,172);
+    background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+

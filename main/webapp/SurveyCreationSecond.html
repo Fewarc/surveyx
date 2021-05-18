@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SurveyX, survey delivery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/styles.css" />
+        <script type="text/javascript" src="js/ajax.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.2/autosize.min.js"></script>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+        </style>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&display=swap');
+        </style>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+        </style>
+        <link rel="icon" href="icon.png">
+    </head>
+    
+    <body style="background-color: white; " onLoad="mainLoad('navBar'); initNextStep();">
+        <div style='position: relative; min-height: 100vh;'>
+            <div id="navBar" style=" position:fixed; height:75px; width:100%; background: rgb(6,122,167); z-index: 1;
+            background: linear-gradient(180deg, rgba(6,122,167,1) 0%, rgba(0,192,173,1) 80%); box-shadow: 0px 0px 10px 0px black;"> 
+                <div style="border-width:5px; border-color:black; height:100%; width:1300px; margin: auto;">
+                    <a href="http://localhost:8080/ProjectIT/"> <div class="logoButton" style="margin-right: 1px; 
+                                                                     "><img style="height:65px; width: 250px" src="surveyxw.png"> </div> </a>
+                    <a onClick="checkLogNavBar('ADD')"> <div class="navBarButton"><h1 class="buttonText">Add survey</h1></div> </a>
+                    <a onClick="checkLogNavBar('MY')"> <div class="navBarButton"><h1 class="buttonText">My surveys</h1></div> </a>
+                    <a href="http://localhost:8080/ProjectIT/"> <div class="navBarButton"><h1 class="buttonText">Browse</h1></div> </a>
+                    <a href="http://localhost:8080/ProjectIT/"> <div class="navBarButton"><h1 class="buttonText">Help</h1></div> </a>
+                    <a href="http://localhost:8080/ProjectIT/"> <div class="navBarButton"><h1 class="buttonText">FAQ</h1></div> </a>
+                    <a href="RegistrationPanel.html"> <div class="alterButton"><h1>JOIN NOW</h1></div> </a>
+                    <a href="LogInPanel.html"> <div class="logButton"><h1>LOG IN</h1></div> </a>
+                </div>
+            </div>
+
+            <div style="height: 80px; width: 100%;"></div>
+
+            <div >
+                <div id="surveyTitleDiv" style="background: rgb(2,218,172); margin-left: 70px; line-height: 90%; margin-bottom: 25px; padding: 25px;
+                background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%); -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent; font-family: 'Open sans condensed', sans-serif; font-size: 120px;"></div>
+
+                <div class="container" style="width: 100%;
+                background: linear-gradient(180deg, rgba(2,218,172,1) 0%, rgba(3,151,171,1) 100%);">
+                    <div id="surveyDescriptionDiv" style="color: white; font-family: 'Open sans condensed', 
+                         sans-serif; text-align: left; font-size: 40px; margin: auto; padding: 30px 80px 30px 80px;"></div>
+                </div>
+
+                <div id="surveyPublicBoolDiv" style="color: #cccccc; font-family: 'Open sans condensed', 
+                     sans-serif; font-size: 30px; margin-bottom: 50px; margin-left: 80px;"></div>
+
+            </div>  
+            <div class="container" style='margin-bottom: 100px; '>
+
+                <div id="questions">    </div>
+
+                <div  style="margin-bottom: 75px; padding-left: 50px;">
+                    <div class="addQuestionButton" onClick="addQuestion('r')">Add radio button question</div>
+                    <div class="addQuestionButton" onClick="addQuestion('y')">Add yes/no question</div>
+                    <div class="addQuestionButton" onClick="addQuestion('c')">Add checkbox question</div>
+                    <div class="addQuestionButton" onClick="addQuestion('t')">Add text answer question</div>
+                </div>
+
+                <div  class="container" style="margin-bottom: 100px;">
+                    <div class="addQuestionButton" onClick="submitSurvey(); loadPreview();" style="padding-left: 20%; padding-right: 20%; margin-bottom: 100px;">    Finish    </div>
+                </div>
+
+            </div>
+            
+            <div style='height: 100px;'></div>
+            <footer  style="padding-bottom: 50px; text-align: center; font-size: 30px; color: #cccccc; position: absolute; bottom: 0; width: 100%;">
+                Ⓒ Copyright 2021 SurveyX Inc.</br>Contact us : surveyxcontact@surveyx.com
+            </footer>
+        </div>
+    </body>
+</html>
